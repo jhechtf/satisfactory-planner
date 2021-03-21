@@ -1,0 +1,12 @@
+{
+  "screenshots": {
+    "path": "screenshots/",
+    "takeOnFails": true,
+    "fullPage": true
+  },
+  "concurrency": 2,
+  "assertionTimeout": 5000,
+  "src": [
+    "./e2e/tests/**/*.ts"
+  ]
+}
