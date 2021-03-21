@@ -8,5 +8,9 @@
   "assertionTimeout": 5000,
   "src": [
     "./e2e/tests/**/*.ts"
+  ],
+  "browsers": [
+    "chrome",
+    "firefox"
   ]
 }

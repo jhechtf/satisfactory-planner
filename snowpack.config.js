@@ -1,18 +1,24 @@
-// Snowpack Configuration File
-// See all supported options: https://www.snowpack.dev/reference/configuration
-
+/* eslint-disable no-undef */
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
+    public: { url: '/', static: true },
     src: { url: '/dist' },
-    public: { url: '/', static: true }
   },
-  plugins: [
-    '@snowpack/plugin-svelte',
-    '@snowpack/plugin-typescript'
+  plugins: ['@snowpack/plugin-svelte', '@snowpack/plugin-typescript', '@snowpack/plugin-postcss'],
+  routes: [
+    /* Enable an SPA Fallback in development: */
+    // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
+  optimize: {
+    /* Example: Bundle your final build: */
+    // "bundle": true,
+  },
+  packageOptions: {
+    /* ... */
+  },
   devOptions: {
-    open: 'never'
+    /* ... */
   },
   buildOptions: {
     /* ... */

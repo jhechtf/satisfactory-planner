@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": [
+    "eslint-plugin-svelte3",
+    "eslint-plugin-jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:eslint-plugin-jest/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.svelte"
+      ],
+      "processor": "svelte3/svelte3"
+    }
+  ]
+}
