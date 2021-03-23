@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Iron Ore",
+    "stackSize": 100,
+    "type": "solid"
+  },
+  {
+    "name": "Copper Ore",
+    "stackSize": 100,
+    "type": "solid"
+  }
+]

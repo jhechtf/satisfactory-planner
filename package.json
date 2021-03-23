@@ -12,7 +12,8 @@
   "author": "jhechtf+npm@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "svelte": "^3.24.0"
+    "svelte": "^3.24.0",
+    "yrv": "^0.0.38"
   },
   "devDependencies": {
     "@snowpack/plugin-postcss": "^1.2.1",

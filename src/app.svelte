@@ -1,9 +1,18 @@
 <script lang="ts">
   import Navbar from './components/navbar.svelte';
+  import {Router, Route} from 'yrv';
 </script>
 
 <Navbar />
 
-<div class="flex-grow">
-  I am the big content
-</div>
+<Router>
+  <Route fallback>
+    <div class="flex-grow">
+      jimbob
+    </div>
+  </Route>
+</Router>
+
+<footer>
+  I am the footer
+</footer>
