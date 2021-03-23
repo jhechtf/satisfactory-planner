@@ -4,6 +4,7 @@
   "description": "Satisfactory Production Planner",
   "main": "index.js",
   "scripts": {
+    "build": "snowpack build",
     "test": "jest",
     "e2e": "testcafe",
     "dev": "snowpack dev",
@@ -12,7 +13,8 @@
   "author": "jhechtf+npm@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "svelte": "^3.24.0"
+    "svelte": "^3.24.0",
+    "yrv": "^0.0.38"
   },
   "devDependencies": {
     "@snowpack/plugin-postcss": "^1.2.1",

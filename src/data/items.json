@@ -1,0 +1,525 @@
+[
+  {
+    "id": "Desc_Water_C",
+    "name": "Water",
+    "description": "It's water.",
+    "type": "RF_LIQUID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_Leaves_C",
+    "name": "Leaves",
+    "description": "Leaves",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_Wood_C",
+    "name": "Wood",
+    "description": "Wood",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_OreIron_C",
+    "name": "Iron Ore",
+    "description": "Used for crafting.\r\nThe most essential basic resource.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_OreCopper_C",
+    "name": "Copper Ore",
+    "description": "Used for crafting.\r\nBasic resource mainly used for electricity.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_Stone_C",
+    "name": "Limestone",
+    "description": "Used for crafting.\r\nBasic resource mainly used for stable foundations.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_Coal_C",
+    "name": "Coal",
+    "description": "Mainly used as fuel for vehicles & coal generators and for steel production.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_LiquidOil_C",
+    "name": "Crude Oil",
+    "description": "Crude Oil is refined into all kinds of Oil-based resources, like Fuel and Plastic.",
+    "type": "RF_LIQUID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_OreBauxite_C",
+    "name": "Bauxite",
+    "description": "Bauxite is turned into Aluminum Ingots via an advanced smelting process.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_OreGold_C",
+    "name": "Caterium Ore",
+    "description": "Caterium Ore is smelted into Caterium Ingots. Caterium Ingots are mostly used for advanced electronics.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_OreUranium_C",
+    "name": "Uranium",
+    "description": "Uranium is radioactive. Mainly used in Nuclear Power Plants.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_RawQuartz_C",
+    "name": "Raw Quartz",
+    "description": "Raw Quartz is processed into Quartz Crystals which are used for radar and quantum technology.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_Sulfur_C",
+    "name": "Sulfur",
+    "description": "Sulfur is primarily used for Gunpowder.",
+    "type": "RF_SOLID",
+    "isRaw": true
+  },
+  {
+    "id": "Desc_PackagedWater_C",
+    "name": "Packaged Water",
+    "description": "Water, packaged for alternative transport.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CompactedCoal_C",
+    "name": "Compacted Coal",
+    "description": "A much more efficient alternative for Coal. Used as fuel for vehicles & coal generators.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_UraniumCell_C",
+    "name": "Encased Uranium Cell",
+    "description": "Uranium Cells are concrete encased uranium pellets. Primarily used to make Nuclear Fuel Rods\r\nModerately radioactive.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_UraniumPellet_C",
+    "name": "Uranium Pellet",
+    "description": "Uranium Pellets are purified and casted from Uranium Ore. Primarily used to make Uranium Cells.\r\nModerately radioactive.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_PackagedOil_C",
+    "name": "Packaged Oil",
+    "description": "Crude Oil, packaged for transportation or to be used as vehicle fuel.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Cement_C",
+    "name": "Concrete",
+    "description": "Used for building.\r\nGood for stable foundations.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_IronPlate_C",
+    "name": "Iron Plate",
+    "description": "Used for crafting.\r\nOne of the most basic parts.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_IronRod_C",
+    "name": "Iron Rod",
+    "description": "Used for crafting.\r\nOne of the most basic parts.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CrystalShard_C",
+    "name": "Power Shard",
+    "description": "Mucus from the power slugs compressed into a solid crystal-like shard. \r\nIt radiates a strange power.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Fuel_C",
+    "name": "Packaged Fuel",
+    "description": "Fuel.\r\nPackaged Fuel, either converted into electricity or as fuel for vehicles.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_HazmatFilter_C",
+    "name": "Iodine Infused Filter",
+    "description": "Used in hazmat suits to filter out radioactive particles in the air.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SpikedRebar_C",
+    "name": "Spiked Rebar",
+    "description": "Ammo for the Rebar Gun.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CartridgeStandard_C",
+    "name": "Cartridge",
+    "description": "Ammo for the Rifle.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_HUBParts_C",
+    "name": "HUB Parts",
+    "description": "The parts required to build the basic structure of the HUB.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Wire_C",
+    "name": "Wire",
+    "description": "Used for crafting.\r\nOne of the most basic parts.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Filter_C",
+    "name": "Filter",
+    "description": "Used in gas masks to filter out pollutants in the air.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Cable_C",
+    "name": "Cable",
+    "description": "Used for crafting.\r\nPrimarily used to build power lines.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_IronPlateReinforced_C",
+    "name": "Reinforced Iron Plate",
+    "description": "Used for crafting.\r\nA sturdier and more durable Iron Plate.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CopperIngot_C",
+    "name": "Copper Ingot",
+    "description": "Used for crafting.\r\nCrafted into the most basic parts.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_IronScrew_C",
+    "name": "Screw",
+    "description": "Used for crafting.\r\nOne of the most basic parts.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SpaceElevatorPart_1_C",
+    "name": "Smart Plating",
+    "description": "Project Part #1. Send up the Space Elevator to complete phases of Project Assembly.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SpaceElevatorPart_2_C",
+    "name": "Versatile Framework",
+    "description": "Project Part #2. Send up the Space Elevator to complete phases of Project Assembly.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SpaceElevatorPart_3_C",
+    "name": "Automated Wiring",
+    "description": "Project Part #3. Send up the Space Elevator to complete phases of Project Assembly.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SpaceElevatorPart_4_C",
+    "name": "Modular Engine",
+    "description": "Project Part #4. Send up the Space Elevator to complete phases of Project Assembly.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SpaceElevatorPart_5_C",
+    "name": "Adaptive Control Unit",
+    "description": "Project Part #5. Send up the Space Elevator to complete phases of Project Assembly.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_IronIngot_C",
+    "name": "Iron Ingot",
+    "description": "Used for crafting.\r\nCrafted into the most basic parts.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_AluminumPlate_C",
+    "name": "Alclad Aluminum Sheet",
+    "description": "Thin lightweight & highly durable sheet that is mainly used for products that need to be light or have high heat conduction.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Motor_C",
+    "name": "Motor",
+    "description": "The Motor creates a mechanical force that is used to move things from machines to vehicles.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Rubber_C",
+    "name": "Rubber",
+    "description": "Rubber is a material that is very flexible and has a lot of friction.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CircuitBoard_C",
+    "name": "Circuit Board",
+    "description": "Circuit Boards are advanced electronics that are used in a plethora of different ways.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CopperSheet_C",
+    "name": "Copper Sheet",
+    "description": "Used for crafting.\r\nPrimarily used for pipelines due to its high corrosion resistance.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Plastic_C",
+    "name": "Plastic",
+    "description": "A versatile and easy to manufacture material that can be used for a lot of things.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SteelPlateReinforced_C",
+    "name": "Encased Industrial Beam",
+    "description": "Encased Industrial Beams utilizes the compressive strength of concrete and tensile strength of steel simultaneously.\r\nMostly used as a stable basis for constructing buildings.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SteelPipe_C",
+    "name": "Steel Pipe",
+    "description": "Steel Pipes are used most often when constructing a little more advanced buildings.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_LiquidFuel_C",
+    "name": "Fuel",
+    "description": "Fuel is either converted into electricity or as fuel for vehicles.",
+    "type": "RF_LIQUID"
+  },
+  {
+    "id": "Desc_PolymerResin_C",
+    "name": "Polymer Resin",
+    "description": "Used for crafting.\r\nA by-product of oil refinement into fuel. Commonly used to manufacture plastics.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_HeavyOilResidue_C",
+    "name": "Heavy Oil Residue",
+    "description": "A by-product of Plastic and Rubber production. Can be further refined into Fuel and Petroleum Coke.",
+    "type": "RF_LIQUID"
+  },
+  {
+    "id": "Desc_PetroleumCoke_C",
+    "name": "Petroleum Coke",
+    "description": "Used for crafting.\r\nA carbon-rich material distilled from Heavy Oil Residue. \r\nUsed as a less efficient coal replacement or for aluminum refinement.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_ModularFrame_C",
+    "name": "Modular Frame",
+    "description": "Used for crafting.\r\nMulti-purpose building block.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Rotor_C",
+    "name": "Rotor",
+    "description": "Used for crafting.\r\nThe moving parts of a motor.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SteelIngot_C",
+    "name": "Steel Ingot",
+    "description": "Steel Ingots are made from Iron Ore that's been smelted with Coal. They are made into several parts used in building construction.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_AluminaSolution_C",
+    "name": "Alumina Solution",
+    "description": "Dissolved Alumina, extracted from Bauxite. Can be further refined into pure Aluminum.",
+    "type": "RF_LIQUID"
+  },
+  {
+    "id": "Desc_AluminumScrap_C",
+    "name": "Aluminum Scrap",
+    "description": "Aluminum Scrap is pure aluminum refined from Alumina. Can be smelted down to Aluminum Ingots for industrial usage.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_AluminumIngot_C",
+    "name": "Aluminum Ingot",
+    "description": "Aluminum Ingots are made from Aluminum Scrap. It is mostly used to produce specialized aluminum-based parts.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Silica_C",
+    "name": "Silica",
+    "description": "Derived from quartz, commonly used in structural materials and microelectronics.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Computer_C",
+    "name": "Computer",
+    "description": "A Computer is a complex logic machine that is used to control advanced behaviour in machines.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_ModularFrameHeavy_C",
+    "name": "Heavy Modular Frame",
+    "description": "A more robust multi-purpose frame.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SteelPlate_C",
+    "name": "Steel Beam",
+    "description": "Steel Beams are used most often when constructing a little more advanced buildings.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_GoldIngot_C",
+    "name": "Caterium Ingot",
+    "description": "Caterium Ingots are smelted from Caterium Ore. Caterium Ingots are mostly used for advanced electronics.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_HighSpeedConnector_C",
+    "name": "High-Speed Connector",
+    "description": "The high-speed connector connects several cables and wires in a very efficient way. Uses a standard pattern so its applications are many and varied.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Stator_C",
+    "name": "Stator",
+    "description": "The static parts of a motor",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CircuitBoardHighSpeed_C",
+    "name": "A.I. Limiter",
+    "description": "A.I. Limiter are super advanced electronics that are used to control A.I.s and keep them from evolving in malicious ways.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_HighSpeedWire_C",
+    "name": "Quickwire",
+    "description": "Caterium's high conductivity and resistance to corrosion makes it ideal for small, advanced electronics.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_QuartzCrystal_C",
+    "name": "Quartz Crystal",
+    "description": "Used for radar and quantum technology.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_LiquidTurboFuel_C",
+    "name": "Turbofuel",
+    "description": "A more efficient alternative to Fuel. Used in Fuel Generators.",
+    "type": "RF_LIQUID"
+  },
+  {
+    "id": "Desc_FluidCanister_C",
+    "name": "Empty Canister",
+    "description": "Used to package fluids for transportation. Can be recycled.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_TurboFuel_C",
+    "name": "Packaged Turbofuel",
+    "description": "Packaged Turbofuel, a more efficient alternative to Fuel. Used in vehicles.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CrystalOscillator_C",
+    "name": "Crystal Oscillator",
+    "description": "A crystal oscillator is an electronic oscillator circuit that uses the mechanical resonance of a vibrating crystal to create an electrical signal with a precise frequency.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_ElectromagneticControlRod_C",
+    "name": "Electromagnetic Control Rod",
+    "description": "Control Rods regulate power expenditure via electromagnetism.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_ComputerSuper_C",
+    "name": "Supercomputer",
+    "description": "The supercomputer is the next-gen version of the computer.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_SulfuricAcid_C",
+    "name": "Sulfuric Acid",
+    "description": "A liquid mostly used to extract elements from ore.",
+    "type": "RF_LIQUID"
+  },
+  {
+    "id": "Desc_Gunpowder_C",
+    "name": "Black Powder",
+    "description": "An explosive powder that is commonly used in explosives and cartridges.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_AluminumPlateReinforced_C",
+    "name": "Heat Sink",
+    "description": "Used to dissipate heat faster.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_MotorLightweight_C",
+    "name": "Turbo Motor",
+    "description": "The Turbo Motor is a more complex, and more powerful, version of the regular Motor.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Battery_C",
+    "name": "Battery",
+    "description": "Batteries store an electrical charge. They are primarily used as a power source.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_ModularFrameLightweight_C",
+    "name": "Radio Control Unit",
+    "description": "Enhances and directs radio signals",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_NobeliskExplosive_C",
+    "name": "Nobelisk",
+    "description": "Can be used with the Nobelisk Detonator to blow up cracked boulders, vegetation or other vulnerable targets.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Crystal_C",
+    "name": "Green Power Slug",
+    "description": "A strange slug radiating a weak strange power.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_PackagedOilResidue_C",
+    "name": "Packaged Heavy Oil Residue",
+    "description": "Heavy Oil Residue, packaged for alternative transport.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_ColorCartridge_C",
+    "name": "Color Cartridge",
+    "description": "Ammo for the Color Gun.\r\nNecessary to change the color of factory buildings and vehicles.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Crystal_mk2_C",
+    "name": "Yellow Power Slug",
+    "description": "A strange slug radiating a strange power.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Crystal_mk3_C",
+    "name": "Purple Power Slug",
+    "description": "A strange slug radiating a powerful strange power.",
+    "type": "RF_SOLID"
+  }
+]
