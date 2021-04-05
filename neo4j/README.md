@@ -1,0 +1,1 @@
+This folder is for some back-end work utilizing Neo4j and is not meant to be in the final setup. However, I am having some issue with some dependencies and need this on another computer.

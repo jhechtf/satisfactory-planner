@@ -1,0 +1,68 @@
+id,name,description,type
+Desc_Cement_C,Concrete,Used for building.\r\nGood for stable foundations.,RF_SOLID
+Desc_IronPlate_C,Iron Plate,Used for crafting.\r\nOne of the most basic parts.,RF_SOLID
+Desc_IronRod_C,Iron Rod,Used for crafting.\r\nOne of the most basic parts.,RF_SOLID
+Desc_CrystalShard_C,Power Shard,Mucus from the power slugs compressed into a solid crystal-like shard. \r\nIt radiates a strange power.,RF_SOLID
+Desc_Fuel_C,Packaged Fuel,"Fuel.\r\nPackaged Fuel, either converted into electricity or as fuel for vehicles.",RF_SOLID
+Desc_HazmatFilter_C,Iodine Infused Filter,Used in hazmat suits to filter out radioactive particles in the air.,RF_SOLID
+Desc_SpikedRebar_C,Spiked Rebar,Ammo for the Rebar Gun.,RF_SOLID
+Desc_CartridgeStandard_C,Cartridge,Ammo for the Rifle.,RF_SOLID
+Desc_HUBParts_C,HUB Parts,The parts required to build the basic structure of the HUB.,RF_SOLID
+Desc_Wire_C,Wire,Used for crafting.\r\nOne of the most basic parts.,RF_SOLID
+Desc_Filter_C,Filter,Used in gas masks to filter out pollutants in the air.,RF_SOLID
+Desc_Cable_C,Cable,Used for crafting.\r\nPrimarily used to build power lines.,RF_SOLID
+Desc_IronPlateReinforced_C,Reinforced Iron Plate,Used for crafting.\r\nA sturdier and more durable Iron Plate.,RF_SOLID
+Desc_CopperIngot_C,Copper Ingot,Used for crafting.\r\nCrafted into the most basic parts.,RF_SOLID
+Desc_IronScrew_C,Screw,Used for crafting.\r\nOne of the most basic parts.,RF_SOLID
+Desc_SpaceElevatorPart_1_C,Smart Plating,Project Part #1. Send up the Space Elevator to complete phases of Project Assembly.,RF_SOLID
+Desc_SpaceElevatorPart_2_C,Versatile Framework,Project Part #2. Send up the Space Elevator to complete phases of Project Assembly.,RF_SOLID
+Desc_SpaceElevatorPart_3_C,Automated Wiring,Project Part #3. Send up the Space Elevator to complete phases of Project Assembly.,RF_SOLID
+Desc_SpaceElevatorPart_4_C,Modular Engine,Project Part #4. Send up the Space Elevator to complete phases of Project Assembly.,RF_SOLID
+Desc_SpaceElevatorPart_5_C,Adaptive Control Unit,Project Part #5. Send up the Space Elevator to complete phases of Project Assembly.,RF_SOLID
+Desc_IronIngot_C,Iron Ingot,Used for crafting.\r\nCrafted into the most basic parts.,RF_SOLID
+Desc_AluminumPlate_C,Alclad Aluminum Sheet,Thin lightweight & highly durable sheet that is mainly used for products that need to be light or have high heat conduction.,RF_SOLID
+Desc_Motor_C,Motor,The Motor creates a mechanical force that is used to move things from machines to vehicles.,RF_SOLID
+Desc_Rubber_C,Rubber,Rubber is a material that is very flexible and has a lot of friction.,RF_SOLID
+Desc_CircuitBoard_C,Circuit Board,Circuit Boards are advanced electronics that are used in a plethora of different ways.,RF_SOLID
+Desc_CopperSheet_C,Copper Sheet,Used for crafting.\r\nPrimarily used for pipelines due to its high corrosion resistance.,RF_SOLID
+Desc_Plastic_C,Plastic,A versatile and easy to manufacture material that can be used for a lot of things.,RF_SOLID
+Desc_SteelPlateReinforced_C,Encased Industrial Beam,Encased Industrial Beams utilizes the compressive strength of concrete and tensile strength of steel simultaneously.\r\nMostly used as a stable basis for constructing buildings.,RF_SOLID
+Desc_SteelPipe_C,Steel Pipe,Steel Pipes are used most often when constructing a little more advanced buildings.,RF_SOLID
+Desc_LiquidFuel_C,Fuel,Fuel is either converted into electricity or as fuel for vehicles.,RF_LIQUID
+Desc_PolymerResin_C,Polymer Resin,Used for crafting.\r\nA by-product of oil refinement into fuel. Commonly used to manufacture plastics.,RF_SOLID
+Desc_HeavyOilResidue_C,Heavy Oil Residue,A by-product of Plastic and Rubber production. Can be further refined into Fuel and Petroleum Coke.,RF_LIQUID
+Desc_PetroleumCoke_C,Petroleum Coke,Used for crafting.\r\nA carbon-rich material distilled from Heavy Oil Residue. \r\nUsed as a less efficient coal replacement or for aluminum refinement.,RF_SOLID
+Desc_ModularFrame_C,Modular Frame,Used for crafting.\r\nMulti-purpose building block.,RF_SOLID
+Desc_Rotor_C,Rotor,Used for crafting.\r\nThe moving parts of a motor.,RF_SOLID
+Desc_SteelIngot_C,Steel Ingot,Steel Ingots are made from Iron Ore that's been smelted with Coal. They are made into several parts used in building construction.,RF_SOLID
+Desc_AluminaSolution_C,Alumina Solution,"Dissolved Alumina, extracted from Bauxite. Can be further refined into pure Aluminum.",RF_LIQUID
+Desc_AluminumScrap_C,Aluminum Scrap,Aluminum Scrap is pure aluminum refined from Alumina. Can be smelted down to Aluminum Ingots for industrial usage.,RF_SOLID
+Desc_AluminumIngot_C,Aluminum Ingot,Aluminum Ingots are made from Aluminum Scrap. It is mostly used to produce specialized aluminum-based parts.,RF_SOLID
+Desc_Silica_C,Silica,"Derived from quartz, commonly used in structural materials and microelectronics.",RF_SOLID
+Desc_Computer_C,Computer,A Computer is a complex logic machine that is used to control advanced behaviour in machines.,RF_SOLID
+Desc_ModularFrameHeavy_C,Heavy Modular Frame,A more robust multi-purpose frame.,RF_SOLID
+Desc_SteelPlate_C,Steel Beam,Steel Beams are used most often when constructing a little more advanced buildings.,RF_SOLID
+Desc_GoldIngot_C,Caterium Ingot,Caterium Ingots are smelted from Caterium Ore. Caterium Ingots are mostly used for advanced electronics.,RF_SOLID
+Desc_HighSpeedConnector_C,High-Speed Connector,The high-speed connector connects several cables and wires in a very efficient way. Uses a standard pattern so its applications are many and varied.,RF_SOLID
+Desc_Stator_C,Stator,The static parts of a motor,RF_SOLID
+Desc_CircuitBoardHighSpeed_C,A.I. Limiter,A.I. Limiter are super advanced electronics that are used to control A.I.s and keep them from evolving in malicious ways.,RF_SOLID
+Desc_HighSpeedWire_C,Quickwire,"Caterium's high conductivity and resistance to corrosion makes it ideal for small, advanced electronics.",RF_SOLID
+Desc_QuartzCrystal_C,Quartz Crystal,Used for radar and quantum technology.,RF_SOLID
+Desc_LiquidTurboFuel_C,Turbofuel,A more efficient alternative to Fuel. Used in Fuel Generators.,RF_LIQUID
+Desc_FluidCanister_C,Empty Canister,Used to package fluids for transportation. Can be recycled.,RF_SOLID
+Desc_TurboFuel_C,Packaged Turbofuel,"Packaged Turbofuel, a more efficient alternative to Fuel. Used in vehicles.",RF_SOLID
+Desc_CrystalOscillator_C,Crystal Oscillator,A crystal oscillator is an electronic oscillator circuit that uses the mechanical resonance of a vibrating crystal to create an electrical signal with a precise frequency.,RF_SOLID
+Desc_ElectromagneticControlRod_C,Electromagnetic Control Rod,Control Rods regulate power expenditure via electromagnetism.,RF_SOLID
+Desc_ComputerSuper_C,Supercomputer,The supercomputer is the next-gen version of the computer.,RF_SOLID
+Desc_SulfuricAcid_C,Sulfuric Acid,A liquid mostly used to extract elements from ore.,RF_LIQUID
+Desc_Gunpowder_C,Black Powder,An explosive powder that is commonly used in explosives and cartridges.,RF_SOLID
+Desc_AluminumPlateReinforced_C,Heat Sink,Used to dissipate heat faster.,RF_SOLID
+Desc_MotorLightweight_C,Turbo Motor,"The Turbo Motor is a more complex, and more powerful, version of the regular Motor.",RF_SOLID
+Desc_Battery_C,Battery,Batteries store an electrical charge. They are primarily used as a power source.,RF_SOLID
+Desc_ModularFrameLightweight_C,Radio Control Unit,Enhances and directs radio signals,RF_SOLID
+Desc_NobeliskExplosive_C,Nobelisk,"Can be used with the Nobelisk Detonator to blow up cracked boulders, vegetation or other vulnerable targets.",RF_SOLID
+Desc_Crystal_C,Green Power Slug,A strange slug radiating a weak strange power.,RF_SOLID
+Desc_PackagedOilResidue_C,Packaged Heavy Oil Residue,"Heavy Oil Residue, packaged for alternative transport.",RF_SOLID
+Desc_ColorCartridge_C,Color Cartridge,Ammo for the Color Gun.\r\nNecessary to change the color of factory buildings and vehicles.,RF_SOLID
+Desc_Crystal_mk2_C,Yellow Power Slug,A strange slug radiating a strange power.,RF_SOLID
+Desc_Crystal_mk3_C,Purple Power Slug,A strange slug radiating a powerful strange power.,RF_SOLID
