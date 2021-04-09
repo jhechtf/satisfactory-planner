@@ -12,7 +12,7 @@ module.exports = {
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    // "bundle": true,
+    bundle: process.env.NODE_ENV === 'production',
   },
   packageOptions: {
     /* ... */

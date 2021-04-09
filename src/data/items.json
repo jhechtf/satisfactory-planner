@@ -1,5 +1,113 @@
 [
   {
+    "id": "Desc_Water_C",
+    "name": "Water",
+    "description": "It's water.",
+    "type": "RF_LIQUID"
+  },
+  {
+    "id": "Desc_Leaves_C",
+    "name": "Leaves",
+    "description": "Leaves",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Wood_C",
+    "name": "Wood",
+    "description": "Wood",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_OreIron_C",
+    "name": "Iron Ore",
+    "description": "Used for crafting.\r\nThe most essential basic resource.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_OreCopper_C",
+    "name": "Copper Ore",
+    "description": "Used for crafting.\r\nBasic resource mainly used for electricity.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Stone_C",
+    "name": "Limestone",
+    "description": "Used for crafting.\r\nBasic resource mainly used for stable foundations.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Coal_C",
+    "name": "Coal",
+    "description": "Mainly used as fuel for vehicles & coal generators and for steel production.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_LiquidOil_C",
+    "name": "Crude Oil",
+    "description": "Crude Oil is refined into all kinds of Oil-based resources, like Fuel and Plastic.",
+    "type": "RF_LIQUID"
+  },
+  {
+    "id": "Desc_OreBauxite_C",
+    "name": "Bauxite",
+    "description": "Bauxite is turned into Aluminum Ingots via an advanced smelting process.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_OreGold_C",
+    "name": "Caterium Ore",
+    "description": "Caterium Ore is smelted into Caterium Ingots. Caterium Ingots are mostly used for advanced electronics.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_OreUranium_C",
+    "name": "Uranium",
+    "description": "Uranium is radioactive. Mainly used in Nuclear Power Plants.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_RawQuartz_C",
+    "name": "Raw Quartz",
+    "description": "Raw Quartz is processed into Quartz Crystals which are used for radar and quantum technology.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_Sulfur_C",
+    "name": "Sulfur",
+    "description": "Sulfur is primarily used for Gunpowder.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_PackagedWater_C",
+    "name": "Packaged Water",
+    "description": "Water, packaged for alternative transport.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_CompactedCoal_C",
+    "name": "Compacted Coal",
+    "description": "A much more efficient alternative for Coal. Used as fuel for vehicles & coal generators.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_UraniumCell_C",
+    "name": "Encased Uranium Cell",
+    "description": "Uranium Cells are concrete encased uranium pellets. Primarily used to make Nuclear Fuel Rods\r\nModerately radioactive.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_UraniumPellet_C",
+    "name": "Uranium Pellet",
+    "description": "Uranium Pellets are purified and casted from Uranium Ore. Primarily used to make Uranium Cells.\r\nModerately radioactive.",
+    "type": "RF_SOLID"
+  },
+  {
+    "id": "Desc_PackagedOil_C",
+    "name": "Packaged Oil",
+    "description": "Crude Oil, packaged for transportation or to be used as vehicle fuel.",
+    "type": "RF_SOLID"
+  },
+  {
     "id": "Desc_Cement_C",
     "name": "Concrete",
     "description": "Used for building.\r\nGood for stable foundations.",
