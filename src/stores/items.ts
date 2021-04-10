@@ -17,4 +17,7 @@ export default readable<Map<string, Item>>(new Map<string, Item>(), (set) => {
       set(Item.allItems);
     })
     .catch(console.error);
+  if (import.meta.hot) {
+    import.meta.hot.accept(() => set(new Map<string, Item>()));
+  }
 });

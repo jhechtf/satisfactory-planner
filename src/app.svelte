@@ -1,16 +1,16 @@
 <script lang="ts">
+  import Filtering from './components/filtering.svelte';
   import Navbar from './components/navbar.svelte';
   import items from './stores/items';
-  import recipes from './stores/recipe';
 </script>
 
 <Navbar />
 
-<div class="flex-grow">
-  <h1>Plantorio</h1>
-  I am jim
-  {$items.size}
-  <p>{$recipes?.length} Recipes</p>
+<div class="flex-grow p-2">
+  <h1 class="text-3xl font-sans">Plantorio</h1>
+  
+  <Filtering />
+  
 </div>
 
 <footer class="p-2 text-center bg-black text-gray-200">
