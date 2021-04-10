@@ -1,4 +1,4 @@
-import type Item from './item';
+import Item, { ItemType } from './item';
 interface ItemCount {
   /** @description the count of the items consumed / produced per minute */
   count: number;
@@ -46,5 +46,7 @@ export default class Recipe {
       }
     }
   }
-
+  toJSON(): string {
+    return `Recipe ${this.name}: ${this.inputs.map(input => `${input.item.type === ItemType.LIQUID ? input.count / 1000 : input.count} ${input.item.name}`).join(' + ')} -> ${this.outputs.map(output => `${output.item.type === ItemType.LIQUID ? output.count / 1000 : output.count} ${output.item.name}`).join(' + ')}`
+  }
 }
