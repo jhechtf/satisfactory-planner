@@ -5,7 +5,6 @@ import items from './items';
 import Recipe from '../classes/recipe';
 
 export default derived<typeof items, Recipe[]>(items, ($items, set) => {
-  console.log('hey jim')
   import('../data/recipes.json')
     .then(res => {
       // Sometimes when we first load the store it will have yet to process all of the items. We wait for that to finish.
@@ -30,7 +29,6 @@ export default derived<typeof items, Recipe[]>(items, ($items, set) => {
             }
           });
         });
-
         recipes.push(new Recipe(mDisplayName, ClassName, inputs, outputs))
       }
       set(recipes);

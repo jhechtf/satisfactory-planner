@@ -27,7 +27,6 @@
   onMount(() => {
     // in order to remove the event later we have to have it in-memory or it will fail.
     const fn = (e: MouseEvent) => {
-      console.log(el, e.target);
       // if(e.target !== null && !el.contains(e.target as Node)) isOpen = false;
     };
     // Add the event

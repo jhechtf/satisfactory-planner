@@ -23,7 +23,8 @@ export default class Recipe {
   }
   public id: string;
   /**
-   * 
+   * @param name the human-version of the recipe.
+   * @param id the ID of the recipe.
    * @param inputs 
    * @param outputs
    * @param power Power outtage in MJ
@@ -38,11 +39,11 @@ export default class Recipe {
     // for each of the outputs we have to add an entry to the Recipes map. If there are already recipes, then we concat the array with our current element.
     // Otherwise we simply set the array to a new array consisting of this element
     for (const { item } of outputs) {
-      const recipes = Recipe.RecipesByOutput.get(item.name);
+      const recipes = Recipe.RecipesByOutput.get(item.id as string);
       if (recipes) {
-        Recipe.RecipesByOutput.set(item.name, recipes.concat(this));
+        Recipe.RecipesByOutput.set(item.id as string, recipes.concat(this));
       } else {
-        Recipe.RecipesByOutput.set(item.name, [this]);
+        Recipe.RecipesByOutput.set(item.id as string, [this]);
       }
     }
   }

@@ -6,15 +6,17 @@
   import loading from './stores/loading';
   import Recipe from './classes/recipe';
   let new_items: Item[] = [];
+  let items_with_recipes: string[] = [];
   $: new_items = [...$items.values()].map(item => {
     return {
       key: item.id,
       label: item.name
     };
   });
+  $: items_with_recipes = [...Recipe.RecipesByOutput.keys()]
 
   function lookupRecipe(id: string) {
-    console.log(Recipe.RecipesByOutput);
+    console.log(Recipe.RecipesByOutput.get(id));
   }
 </script>
 
@@ -26,7 +28,7 @@
   {:else}
 
   <h1 class="text-3xl font-sans">Plantorio</h1>
-  
+  {items_with_recipes}  
   <Filtering mode='single' placeholder="Select an Item" on:selection={(e) => { console.log(e.detail); lookupRecipe(e.detail.selection[0].key)}} items={new_items}/>
   {/if}
   
