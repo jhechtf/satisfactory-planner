@@ -3,6 +3,7 @@ export interface ItemsInterface {
   name: string;
   description: string;
   type: 'RF_SOLID' | 'RF_LIQUID' | 'RF_GAS';
+  isRaw?: boolean;
 }
 
 export interface RecipesInterface {

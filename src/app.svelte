@@ -1,12 +1,15 @@
 <script lang="ts">
-  import type { Item } from './components/filtering.svelte';
+  import type { Item as FilteringItem } from './components/filtering.svelte';
   import Filtering from './components/filtering.svelte';
   import Navbar from './components/navbar.svelte';
   import items from './stores/items';
   import loading from './stores/loading';
   import Recipe from './classes/recipe';
-  let new_items: Item[] = [];
+  import recipe from './stores/recipe';
+  let new_items: FilteringItem[] = [];
   let items_with_recipes: string[] = [];
+  let recipes_for_item: Recipe[] = [];
+  let chosen_recipe:  Recipe;
   $: new_items = [...$items.values()].map(item => {
     return {
       key: item.id,
@@ -14,10 +17,18 @@
     };
   });
   $: items_with_recipes = [...Recipe.RecipesByOutput.keys()]
+  $: {
+    if(chosen_recipe) {
+      chosen_recipe.calculateRawMaterials();
+    }
+  }
 
   function lookupRecipe(id: string) {
-    console.log(Recipe.RecipesByOutput.get(id));
+    const recipes = Recipe.RecipesByOutput.get(id);
+    if(!recipes) return;
+    recipes_for_item = recipes;
   }
+
 </script>
 
 <Navbar />
@@ -29,7 +40,16 @@
 
   <h1 class="text-3xl font-sans">Plantorio</h1>
   {items_with_recipes}  
-  <Filtering mode='single' placeholder="Select an Item" on:selection={(e) => { console.log(e.detail); lookupRecipe(e.detail.selection[0].key)}} items={new_items}/>
+  <Filtering mode='single' placeholder="Select an Item" on:selection={(e) => { lookupRecipe(e.detail.selection[0].key)}} items={new_items}/>
+    {#if recipes_for_item.length > 0}
+      Please Choose a Recipe:
+      <select bind:value={chosen_recipe}>
+        <option value={null} disabled>Choose one</option>
+        {#each recipes_for_item as recipe}
+          <option value={recipe}>{recipe.name}</option>
+        {/each}
+      </select>
+    {/if}
   {/if}
   
 </div>

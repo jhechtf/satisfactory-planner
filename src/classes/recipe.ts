@@ -1,5 +1,5 @@
 import Item, { ItemType } from './item';
-interface ItemCount {
+export interface ItemCount {
   /** @description the count of the items consumed / produced per minute */
   count: number;
   /**
@@ -29,7 +29,7 @@ export default class Recipe {
    * @param outputs
    * @param power Power outtage in MJ
    */
-  constructor(public name: string, id: string | null, public inputs: ItemCount[], public outputs: ItemCount[], public power: number = 100) {
+  constructor(public name: string, id: string | null, public inputs: ItemCount[], public outputs: ItemCount[]) {
     // if we id is not explicitly given then we assume it to be the same as the name.
     if (id == null) {
       this.id = name;
@@ -50,4 +50,24 @@ export default class Recipe {
   toJSON(): string {
     return `Recipe ${this.name}: ${this.inputs.map(input => `${input.item.type === ItemType.LIQUID ? input.count / 1000 : input.count} ${input.item.name}`).join(' + ')} -> ${this.outputs.map(output => `${output.item.type === ItemType.LIQUID ? output.count / 1000 : output.count} ${output.item.name}`).join(' + ')}`
   }
+
+  calculateRawMaterials() {
+    const materials = [];
+    for(let material of this.inputs) {
+      const current_mats = [];
+      const recipe = Recipe.RecipesByOutput.get(material.item.id as string)?.[0];
+      if(recipe) {
+        current_mats.push(...recipe.inputs.map(i => i.item.name));
+        materials.push(...current_mats);
+      }
+    }
+    console.log(materials);
+    return materials;
+  }
+}
+/**
+ * When we are doing hot reloading this will wipeout our default recipes so we don't have to deal with the errors thrown.
+ */
+if(import.meta.hot) {
+  import.meta.hot.accept(() => Recipe.RecipesByOutput = new Map<string, Recipe[]>());
 }

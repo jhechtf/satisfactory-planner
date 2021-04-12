@@ -12,15 +12,13 @@ module.exports = {
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    bundle: process.env.NODE_ENV === 'production',
+    bundle: true,
+    minify: true
   },
   packageOptions: {
     /* ... */
   },
   devOptions: {
     /* ... */
-  },
-  buildOptions: {
-    /* ... */
-  },
+  }
 };

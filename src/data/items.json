@@ -3,79 +3,92 @@
     "id": "Desc_Water_C",
     "name": "Water",
     "description": "It's water.",
-    "type": "RF_LIQUID"
+    "type": "RF_LIQUID",
+    "isRaw": true
   },
   {
     "id": "Desc_Leaves_C",
     "name": "Leaves",
     "description": "Leaves",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_Wood_C",
     "name": "Wood",
     "description": "Wood",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_OreIron_C",
     "name": "Iron Ore",
     "description": "Used for crafting.\r\nThe most essential basic resource.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_OreCopper_C",
     "name": "Copper Ore",
     "description": "Used for crafting.\r\nBasic resource mainly used for electricity.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_Stone_C",
     "name": "Limestone",
     "description": "Used for crafting.\r\nBasic resource mainly used for stable foundations.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_Coal_C",
     "name": "Coal",
     "description": "Mainly used as fuel for vehicles & coal generators and for steel production.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_LiquidOil_C",
     "name": "Crude Oil",
     "description": "Crude Oil is refined into all kinds of Oil-based resources, like Fuel and Plastic.",
-    "type": "RF_LIQUID"
+    "type": "RF_LIQUID",
+    "isRaw": true
   },
   {
     "id": "Desc_OreBauxite_C",
     "name": "Bauxite",
     "description": "Bauxite is turned into Aluminum Ingots via an advanced smelting process.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_OreGold_C",
     "name": "Caterium Ore",
     "description": "Caterium Ore is smelted into Caterium Ingots. Caterium Ingots are mostly used for advanced electronics.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_OreUranium_C",
     "name": "Uranium",
     "description": "Uranium is radioactive. Mainly used in Nuclear Power Plants.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_RawQuartz_C",
     "name": "Raw Quartz",
     "description": "Raw Quartz is processed into Quartz Crystals which are used for radar and quantum technology.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_Sulfur_C",
     "name": "Sulfur",
     "description": "Sulfur is primarily used for Gunpowder.",
-    "type": "RF_SOLID"
+    "type": "RF_SOLID",
+    "isRaw": true
   },
   {
     "id": "Desc_PackagedWater_C",

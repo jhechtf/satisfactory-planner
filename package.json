@@ -4,6 +4,7 @@
   "description": "Satisfactory Production Planner",
   "main": "index.js",
   "scripts": {
+    "build": "snowpack build",
     "test": "jest",
     "e2e": "testcafe",
     "dev": "snowpack dev",

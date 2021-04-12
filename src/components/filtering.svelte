@@ -55,7 +55,7 @@
         {/if}
       </div>
       <div class="right">
-        <span class="hover:text-red-500 text-red-400 text-lg" class:hidden={selected.length === 0} on:click={() => {selected = [], value = ''}}>&times;</span>
+        <span class="hover:text-red-500 text-red-400 text-lg cursor-pointer" class:hidden={selected.length === 0} on:click={() => {selected = [], value = ''}}>&times;</span>
         {#if isOpen}
         &bigtriangleup;
         {:else}
@@ -68,7 +68,7 @@
     <div class="filtering-input relative">
       <input type="text" class="w-full outline-none dark:bg-gray-800 dark:text-gray-300 md:px-2 xl:px-2" on:focus={() => isOpen = true} bind:value={value}>
     </div>
-    <div class="filtering-items w-full absolute top-8 overflow-y-auto max-h-40 xl:max-h-60">
+    <div class="filtering-items w-full absolute top-8 overflow-y-auto max-h-40 xl:max-h-60 bg-black">
       {#each filtered as item, index}
         <div on:click={() => onFilterClick(item) } class="cursor-pointer filtering-item p-1" class:selected={selected.some(s => s.key === item.key)} class:border-t={index!=0} class:border-gray-500={index!=0}>{item.label}</div>
       {:else}

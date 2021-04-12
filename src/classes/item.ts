@@ -5,10 +5,10 @@ export default class Item {
     if (item !== undefined) return item;
     return new Item(name, id || name, type);
   }
-  constructor(public readonly name: string, public id: string | null, public readonly type: ItemType = ItemType.SOLID) {
+  constructor(public readonly name: string, public id: string | null, public readonly type: ItemType = ItemType.SOLID, public isRaw = false) {
     if (typeof id !== 'string') id = name, this.id = id;
-
-    if (Item.allItems.has(id)) throw Error(`Duplicate key ${id} already found in items`);
+    // if (id === 'Desc_Cement_C') console.log(id, name);
+    // if (Item.allItems.has(id)) throw Error(`Duplicate key ${id} already found in items`);
     Item.allItems.set(id, this);
   }
 }
@@ -17,4 +17,9 @@ export enum ItemType {
   SOLID = 'solid',
   LIQUID = 'liquid',
   GAS = 'gas'
+}
+
+if(import.meta.hot) {
+  // For hot reloads we need to brick this, otherwise we got collision errors.
+  import.meta.hot.accept(() => Item.allItems = new Map<string, Item>());
 }
