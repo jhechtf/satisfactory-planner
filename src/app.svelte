@@ -5,9 +5,7 @@
   import items from './stores/items';
   import loading from './stores/loading';
   import Recipe from './classes/recipe';
-  import recipe from './stores/recipe';
   let new_items: FilteringItem[] = [];
-  let items_with_recipes: string[] = [];
   let recipes_for_item: Recipe[] = [];
   let chosen_recipe:  Recipe;
   $: new_items = [...$items.values()].map(item => {
@@ -16,10 +14,9 @@
       label: item.name
     };
   });
-  $: items_with_recipes = [...Recipe.RecipesByOutput.keys()]
   $: {
     if(chosen_recipe) {
-      chosen_recipe.calculateRawMaterials();
+      console.log(chosen_recipe.calculateRawMaterials());
     }
   }
 
@@ -39,7 +36,6 @@
   {:else}
 
   <h1 class="text-3xl font-sans">Plantorio</h1>
-  {items_with_recipes}  
   <Filtering mode='single' placeholder="Select an Item" on:selection={(e) => { lookupRecipe(e.detail.selection[0].key)}} items={new_items}/>
     {#if recipes_for_item.length > 0}
       Please Choose a Recipe:

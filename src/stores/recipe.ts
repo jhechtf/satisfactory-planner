@@ -8,7 +8,7 @@ export default derived<typeof items, Recipe[]>(items, ($items, set) => {
   import('../data/recipes.json')
     .then(res => {
       // Sometimes when we first load the store it will have yet to process all of the items. We wait for that to finish.
-      // if ($items.size === 0) return set([]);
+      if ($items.size === 0) return null;
       const recipes = [];
       // iterate through the import.
       for (const { ClassName, inputs: rawInputs, outputs: rawOutputs, mManufactoringDuration, mDisplayName } of (res.default as RecipesInterface[])) {

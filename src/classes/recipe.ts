@@ -51,18 +51,13 @@ export default class Recipe {
     return `Recipe ${this.name}: ${this.inputs.map(input => `${input.item.type === ItemType.LIQUID ? input.count / 1000 : input.count} ${input.item.name}`).join(' + ')} -> ${this.outputs.map(output => `${output.item.type === ItemType.LIQUID ? output.count / 1000 : output.count} ${output.item.name}`).join(' + ')}`
   }
 
-  calculateRawMaterials() {
-    const materials = [];
-    for(let material of this.inputs) {
-      const current_mats = [];
-      const recipe = Recipe.RecipesByOutput.get(material.item.id as string)?.[0];
-      if(recipe) {
-        current_mats.push(...recipe.inputs.map(i => i.item.name));
-        materials.push(...current_mats);
-      }
+  calculateRawMaterials(alternates: {[key: string]: Recipe} = {}): ItemCount[] {
+    const returnval = [];
+    for(let input of this.inputs) {
+      let multiplier = input.count;
+      if(input.item.isRaw) returnval.push(input);
     }
-    console.log(materials);
-    return materials;
+    return returnval;
   }
 }
 /**

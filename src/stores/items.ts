@@ -12,7 +12,6 @@ export default readable<Map<string, Item>>(new Map<string, Item>(), (set) => {
   import('../data/items.json')
     .then((res) => {
       for (const imp of (res.default as ItemsInterface[])) {
-        if(imp.id == 'Desc_Cement_C') console.log(imp);
         new Item(imp.name, imp.id, quickMap[imp.type], !!imp.isRaw);
       }
       set(Item.allItems);
