@@ -1,22 +1,19 @@
 <script lang="ts">
-  import type { Item as FilteringItem } from './components/filtering.svelte';
+  import type { ItemCount } from 'types/items';
   import Filtering from './components/filtering.svelte';
   import Navbar from './components/navbar.svelte';
   import items from './stores/items';
   import loading from './stores/loading';
   import Recipe from './classes/recipe';
-  let new_items: FilteringItem[] = [];
+  
+  let new_items: any[] = [];
   let recipes_for_item: Recipe[] = [];
   let chosen_recipe:  Recipe;
-  $: new_items = [...$items.values()].map(item => {
-    return {
-      key: item.id,
-      label: item.name
-    };
-  });
+  let raw_items: ItemCount[] = [];
+  $: new_items = [...$items.values()];
   $: {
     if(chosen_recipe) {
-      console.log(chosen_recipe.calculateRawMaterials());
+      raw_items = chosen_recipe.calculateRawMaterials({});
     }
   }
 
@@ -34,19 +31,62 @@
   {#if $loading}
     LOADING...
   {:else}
-
-  <h1 class="text-3xl font-sans">Plantorio</h1>
-  <Filtering mode='single' placeholder="Select an Item" on:selection={(e) => { lookupRecipe(e.detail.selection[0].key)}} items={new_items}/>
-    {#if recipes_for_item.length > 0}
-      Please Choose a Recipe:
-      <select bind:value={chosen_recipe}>
-        <option value={null} disabled>Choose one</option>
-        {#each recipes_for_item as recipe}
-          <option value={recipe}>{recipe.name}</option>
-        {/each}
-      </select>
+  <section class="w-3/5 mx-auto">
+    <h1 class="text-3xl font-sans">Plantorio</h1>
+    <Filtering
+      mode='single'
+      placeholder="Select an Item"
+      on:selection={(e) => { lookupRecipe(e.detail.selection[0].id)}}
+      items={new_items}
+      getLabel={i=>i.name}
+      />
+    
+      {#if recipes_for_item.length > 0}
+        <h3>Choose Recipe:</h3>
+        <Filtering
+          mode='single'
+          placeholder="Select a recipe"
+          on:selection={(e) => chosen_recipe = e.detail.selection[0] }
+          items={recipes_for_item}
+          getLabel={r => r.toJSON()}
+        >
+        <div slot="filtering-item" let:item={recipe}>
+          <h2 class="font-semibold">
+            {recipe.name}
+          </h2>
+          <div class="flex flex-col md:flex-row justify-between content-center">
+            <div class="flex flex-col md:flex-row">
+              {#each recipe.inputs as input, index}
+                {#if index != 0}
+                  <div class="mx-2">+</div>
+                {/if}
+                <div>{input.count} &times; {input.item.name}</div>
+              {/each}
+            </div>
+            <div class="flex-shrink">
+              &rightarrow;
+            </div>
+            <div class="flex flex-col md:flex-row">
+              {#each recipe.outputs as output, index}
+                <div>
+                  {output.count} &times; {output.item.name}
+                </div>
+              {/each}
+            </div>
+          </div>
+        </div>
+      </Filtering>
+      {/if}
+  
+      {#if raw_items.length > 0}
+        <div class="border border-gray-900">
+          {#each raw_items as item}
+            <h3>{item.count} {item.item.name}</h3>
+          {/each}
+        </div>
+      {/if} 
+    </section>
     {/if}
-  {/if}
   
 </div>
 

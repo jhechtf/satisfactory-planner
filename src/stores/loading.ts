@@ -6,6 +6,5 @@ import recipes from './recipe';
  * Therefore, we set the boolean value to be true 
  */
 export default derived([items, recipes], ([$items, $recipes], set) => {
-  console.log($items.size != 0, $recipes.length != 0);
   set(!($items.size != 0 && $recipes.length != 0));
 }, true);
