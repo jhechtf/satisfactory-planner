@@ -61,6 +61,8 @@ export default class Recipe {
         const recipes = Recipe.RecipesByOutput.get(input.item.id as string);
         // this if statement is needed to make TS happy since Maps could in theory be undefined.
         if (recipes) {
+          const recipe = recipes.find(r => alternates[r.id] !== undefined || !r.name.toLowerCase().includes('alternate:'))
+          console.log(recipe);
           // Iterate over the recipes.
           for (let recipe of recipes) {
             // If the recipe matches one of the chosen alternates, we use it and break this loop.

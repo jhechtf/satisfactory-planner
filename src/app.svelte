@@ -39,7 +39,12 @@
       on:selection={(e) => { lookupRecipe(e.detail.selection[0].id)}}
       items={new_items}
       getLabel={i=>i.name}
-      />
+      >
+        <div slot="filtering-item" let:item={item}>
+          <h2 class="text-lg font-bold">{item.name}</h2>
+          <p class="italic">{item.description}</p>
+        </div>
+      </Filtering>
     
       {#if recipes_for_item.length > 0}
         <h3>Choose Recipe:</h3>
@@ -78,13 +83,6 @@
       </Filtering>
       {/if}
   
-      {#if raw_items.length > 0}
-        <div class="border border-gray-900">
-          {#each raw_items as item}
-            <h3>{item.count} {item.item.name}</h3>
-          {/each}
-        </div>
-      {/if} 
     </section>
     {/if}
   
