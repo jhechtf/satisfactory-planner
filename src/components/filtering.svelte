@@ -72,7 +72,7 @@
     </div>
     <div class="filtering-items w-full absolute top-8 overflow-y-auto max-h-40 xl:max-h-60 bg-black z-50">
       {#each filtered as item, index}
-        <div on:click={() => onFilterClick(item) } class="cursor-pointer filtering-item p-1" class:selected={selected.some(s => s.key === item.key)} class:border-t={index!=0} class:border-gray-500={index!=0}>
+        <div on:click={() => onFilterClick(item) } class="cursor-pointer filtering-item p-1" class:selected={selected.includes(item)} class:border-t={index!=0} class:border-gray-500={index!=0}>
           <slot name="filtering-item" item={item} index={index}>
             {getLabel(item)}
           </slot>

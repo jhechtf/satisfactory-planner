@@ -5,11 +5,10 @@ export default class Item {
     if (item !== undefined) return item;
     return new Item(name, id || name, description, type, isRaw);
   }
-  constructor(public readonly name: string, public id: string | null, public readonly description: string, public readonly type: ItemType = ItemType.SOLID, public isRaw = false) {
-    if (typeof id !== 'string') id = name, this.id = id;
-    // if (id === 'Desc_Cement_C') console.log(id, name);
-    // if (Item.allItems.has(id)) throw Error(`Duplicate key ${id} already found in items`);
-    Item.allItems.set(id, this);
+  id: string;
+  constructor(public readonly name: string, id: string | null, public readonly description: string, public readonly type: ItemType = ItemType.SOLID, public isRaw = false) {
+    this.id = typeof id !== 'string' ? name : id;
+    Item.allItems.set(this.id, this);
   }
 }
 

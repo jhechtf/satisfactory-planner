@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { ItemType } from './classes/item';
   import type { ItemCount } from 'types/items';
   import Filtering from './components/filtering.svelte';
   import Navbar from './components/navbar.svelte';
@@ -41,7 +42,7 @@
       getLabel={i=>i.name}
       >
         <div slot="filtering-item" let:item={item}>
-          <h2 class="text-lg font-bold">{item.name}</h2>
+          <h2 class="font-bold">{item.name}</h2>
           <p class="italic">{item.description}</p>
         </div>
       </Filtering>
@@ -65,7 +66,7 @@
                 {#if index != 0}
                   <div class="mx-2">+</div>
                 {/if}
-                <div>{input.count} &times; {input.item.name}</div>
+                <div>{input.item.type === ItemType.LIQUID ? input.count / 1000 : input.count} &times; {input.item.name}</div>
               {/each}
             </div>
             <div class="flex-shrink">
@@ -74,7 +75,7 @@
             <div class="flex flex-col md:flex-row">
               {#each recipe.outputs as output, index}
                 <div>
-                  {output.count} &times; {output.item.name}
+                  {output.item.type === ItemType.LIQUID ? output.count / 1000 : output.count} &times; {output.item.name}
                 </div>
               {/each}
             </div>

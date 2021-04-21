@@ -52,8 +52,6 @@ export default class Recipe {
     const materials = [];
     // Loop through the inputs
     for (let input of this.inputs) {
-      // get the multiplier of the recipe, if needed. 
-      let multiplier = this.outputs[0].count / input.count;
       // If the input item is a raw material, simply push it to the array. 
       if (input.item.isRaw) materials.push(input);
       else {
@@ -61,26 +59,25 @@ export default class Recipe {
         const recipes = Recipe.RecipesByOutput.get(input.item.id as string);
         // this if statement is needed to make TS happy since Maps could in theory be undefined.
         if (recipes) {
-          const recipe = recipes.find(r => alternates[r.id] !== undefined || !r.name.toLowerCase().includes('alternate:'))
-          console.log(recipe);
-          // Iterate over the recipes.
-          for (let recipe of recipes) {
-            // If the recipe matches one of the chosen alternates, we use it and break this loop.
-            if (alternates[recipe.name]) {
-              materials.push(...recipe.calculateRawMaterials(alternates).map(v => ({ count: v.count * multiplier, item: v.item })));
-              break;
-            }
-            // Else we stop when we hit the default recipe.
-            if (!recipe.name.toLowerCase().includes('alternate:')) {
-              materials.push(...recipe.calculateRawMaterials(alternates).map(v => ({ count: v.count * multiplier, item: v.item })));
-              break;
-            }
+          // grab the recipe we need.
+          const recipe = recipes.find(r => alternates[r.id] !== undefined || !r.name.toLowerCase().includes('alternate:'));
+          /**
+           * Alright so we have this recipe because one of the outputs matches one of our inputs. 
+           * Now we have to figure out which of our inputs match which of these outputs
+           * and figure out if we need to have a multiplier for it.
+           * 
+           * The current input is the `input` variable, so we need to find the output.
+           */
+          const output = recipe?.outputs.find(o => o.item.id === input.item.id);
+          if (!output) throw Error('wtf?');
+          console.log(recipe?.name, output.count, input.count);
+          if (output.count !== input.count) {
+            materials.push(...recipe?.calculateRawMaterials().map(v => ({ count: v.count * input.count / output.count, item: v.item })) as ItemCount[]);
           }
         }
       }
     }
     // We reduce the item down to a generic object to consolidate the counts, otherwise for recipes that have multiple dependencies on the same resource
-    // We s
     return Object.values(materials.reduce(
       (cum: { [key: string]: ItemCount }, cur) => {
 
