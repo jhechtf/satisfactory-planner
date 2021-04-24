@@ -46,7 +46,6 @@
           <p class="italic">{item.description}</p>
         </div>
       </Filtering>
-    
       {#if recipes_for_item.length > 0}
         <h3>Choose Recipe:</h3>
         <Filtering
@@ -82,6 +81,9 @@
           </div>
         </div>
       </Filtering>
+      {/if}
+      {#if raw_items}
+        {JSON.stringify(raw_items)}
       {/if}
   
     </section>

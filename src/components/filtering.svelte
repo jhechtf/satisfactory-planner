@@ -29,11 +29,14 @@
   onMount(() => {
     // in order to remove the event later we have to have it in-memory or it will fail.
     const fn = (e: MouseEvent) => {
+      // If the thing is open, there is a target, and the target is not inside our current element
+      // Close the sumbitch
       if(isOpen && e.target !== null && !el?.contains(e.target as Node)) isOpen = false;
     };
     // Add the event
     document.addEventListener('click', fn);
     () => {
+      // Remove the function whenever this is removed from the document.
       document.removeEventListener('click', fn);
     }
   });
@@ -43,7 +46,6 @@
   .selected {
     @apply bg-gray-600;
   }
-  
 </style>
 
 <div class="filtering flex flex-col border border-gray-500" bind:this={el}>

@@ -49,7 +49,7 @@ export default class Recipe {
   }
 
   calculateRawMaterials(alternates: { [key: string]: Recipe } = {}): ItemCount[] {
-    const materials = [];
+    const materials: ItemCount[] = [];
     // Loop through the inputs
     for (let input of this.inputs) {
       // If the input item is a raw material, simply push it to the array. 
@@ -69,10 +69,14 @@ export default class Recipe {
            * The current input is the `input` variable, so we need to find the output.
            */
           const output = recipe?.outputs.find(o => o.item.id === input.item.id);
+          // If none of the outputs match, wtf?
           if (!output) throw Error('wtf?');
-          console.log(recipe?.name, output.count, input.count);
+          // if the input/output counts do not match, calculate raw materials by multiplying the count by the necessary ratio.
           if (output.count !== input.count) {
-            materials.push(...recipe?.calculateRawMaterials().map(v => ({ count: v.count * input.count / output.count, item: v.item })) as ItemCount[]);
+            materials.push(...recipe?.calculateRawMaterials(alternates).map(v => ({ count: v.count * input.count / output.count, item: v.item })) as ItemCount[]);
+          } else {
+            // Otherwise, get this into the materials.
+            materials.push(...recipe?.calculateRawMaterials(alternates) as ItemCount[]);
           }
         }
       }
@@ -86,7 +90,6 @@ export default class Recipe {
         } else {
           cum[cur.item.id as string] = cur;
         }
-
         return cum;
       },
       {}
