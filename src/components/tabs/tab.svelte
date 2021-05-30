@@ -1,22 +1,18 @@
 <script lang="ts">
   import { getContext, onMount } from 'svelte';
   import type { TabsContext } from './tabs.svelte';
-  /** @description the header that will appear in the */
   export let header: string = '';
-  const tabsContext = getContext<TabsContext>('tabs');
-  let tabIndex = -1;
-  let currentTab = -1;
+  export let id = header;
+  const { addTab, currentTab, removeTab } = getContext<TabsContext>('tabs');
+  // let currentTab: string = '';
   onMount(() => {
-    tabIndex = tabsContext.addTab(header);
-    const unsub = tabsContext.currentTab.subscribe(($tab: number) => {
-      currentTab = $tab;
-    })
+    addTab(id, header);
     return () => {
-      unsub()
-    };
+      removeTab(id);
+    }
   });
-</script>
 
-{#if currentTab === tabIndex}
-  <slot></slot>
+</script>
+{#if id == $currentTab}
+<slot></slot>
 {/if}

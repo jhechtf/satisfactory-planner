@@ -1,28 +1,37 @@
 <script lang="ts" context="module">
   import type { Writable } from 'svelte/store';
   export interface TabsContext {
-    addTab(tab: string): number;
-    currentTab: Writable<number>;
-    setCurrentTab(current: number): void;
+    addTab(id: string, tab: string): void;
+    currentTab: Writable<string>;
+    setCurrentTab(current: string): void;
+    removeTab(tab: string): void;
   }
 </script>
 <script lang="ts">
-  import { getContext, setContext } from 'svelte';
+  import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
-  let tabs: string[] = [];
-  export let currentTab = 0;
+  let tabs: { [key: string]: string } = { };
+  export let currentTab = '';
   let tabStore = writable(currentTab);
-  setContext('tabs', {
-    addTab: (tab: string) => {
-      tabs = [...tabs, tab];
-      return tabs.length - 1;
+
+  setContext<TabsContext>('tabs', {
+    addTab(id: string, tab: string) {
+      if(Object.keys(tabs).length === 0) {
+        currentTab = id;
+        tabStore.update(()=> id);
+      }
+      tabs[id] = tab;
     },
     currentTab: tabStore,
-    setCurrentTab(current: number) {
-      currentTab= current;
-      this.currentTab.update(() => current);
+    setCurrentTab(currentId: string) {
+      tabStore.update(()=>currentId);
+    },
+    removeTab(tabId: string) {
+      delete tabs[tabId];
     }
   });
+
+  $: currentTab = $tabStore;
 
 </script>
 
@@ -31,12 +40,22 @@
     font-weight: bold;
     @apply border-b-4 border-blue-400;
   }
+  .tab-header > div {
+    cursor: pointer;
+  }
+  .tabs {
+    @apply mt-4;
+  }
 </style>
 <div class="tabs">
   <div class="tab-header text-lg flex items-stretch">
-    {#each tabs as tab, index}
-      <div on:click={() => tabStore.update(() => index)} class="py-1 px-2" class:ml-1={index !== 0} class:active-tab={$tabStore === index} data-index={index}>
-        {tab}
+    {#each Object.entries(tabs) as [id, value], index}
+      <div
+        class="p-2"
+        class:active-tab={currentTab === id}
+        on:click={() => tabStore.update(() => id)}
+      >
+        {value}
       </div>
     {/each}
   </div>

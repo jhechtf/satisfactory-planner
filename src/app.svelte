@@ -32,10 +32,7 @@
 <Navbar />
 
 <Router pending="Loading..." path="/">
-  <Route exact path="/" disabled={$loading} component={() => import('./routes/index.svelte')}/>
-  <Route fallback disabled={!$loading}>
-    Loading
-  </Route>
+  <Route exact path="/" pending={"Loading"} component={() => import('./routes/index.svelte')}/>
   <Route fallback>
     404 Shenanigans not found.
   </Route>
